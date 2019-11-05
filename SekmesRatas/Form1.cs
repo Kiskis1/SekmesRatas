@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SekmesRatas.Properties;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,9 +11,8 @@ namespace SekmesRatas
     {
 
         List<string> elementList = new List<string>();
-        //ObservableCollection<string> observable = new ObservableCollection<string>();
 
-        string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Saved.txt";
+        readonly string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Saved.txt";
         public Form1()
         {
             InitializeComponent();
@@ -28,13 +28,13 @@ namespace SekmesRatas
                 {
 
                     case DialogResult.OK:
-                        if (elementList.Count < 20)
+                        if (elementList.Count <= 20)
                         {
-                            elementList.Add(dialog.Textas); 
+                            elementList.Add(dialog.Textas);
                         }
                         else
                         {
-                            MessageBox.Show("Daugiau elementu negalima prideti");
+                            MessageBox.Show(Resources.str_daugiau_negalima);
                         }
                         RefreshListView();
                         break;
@@ -108,14 +108,14 @@ namespace SekmesRatas
             }
             catch (Exception)
             {
-                MessageBox.Show("Bandykite dar karta");
+                MessageBox.Show(Resources.str_try_again);
             }
 
         }
 
         private void Btn_Help_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaa","Pagalba",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(Resources.str_helpas, Resources.str_pagalba, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
