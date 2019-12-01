@@ -22,7 +22,11 @@ namespace SekmesRatas
 
         private void Btn_Ok_Click(object sender, EventArgs e)
         {
-            Textas = TextBox.Text;
+            if (!string.IsNullOrWhiteSpace(TextBox.Text))
+            {
+                Textas = TextBox.Text;
+            }
+            
         }
     }
 }

@@ -61,11 +61,38 @@ namespace SekmesRatas.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Daugiau elementu negalima prideti.
+        ///   Looks up a localized string similar to Ar tikrai norite istrinti elementa/us?.
+        /// </summary>
+        internal static string str_ar_tikrai {
+            get {
+                return ResourceManager.GetString("str_ar_tikrai", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pridekite bent 2 elementus.
+        /// </summary>
+        internal static string str_bent_2_elem {
+            get {
+                return ResourceManager.GetString("str_bent_2_elem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Daugiau elementu negalima prideti arba neivedet reiksmes.
         /// </summary>
         internal static string str_daugiau_negalima {
             get {
                 return ResourceManager.GetString("str_daugiau_negalima", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demesio.
+        /// </summary>
+        internal static string str_demesio {
+            get {
+                return ResourceManager.GetString("str_demesio", resourceCulture);
             }
         }
         
@@ -76,6 +103,15 @@ namespace SekmesRatas.Properties {
         internal static string str_helpas {
             get {
                 return ResourceManager.GetString("str_helpas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nepasirinkote elemento.
+        /// </summary>
+        internal static string str_nepasirinktas_elem {
+            get {
+                return ResourceManager.GetString("str_nepasirinktas_elem", resourceCulture);
             }
         }
         

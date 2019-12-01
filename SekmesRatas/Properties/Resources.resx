@@ -117,12 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="str_ar_tikrai" xml:space="preserve">
+    <value>Ar tikrai norite istrinti elementa/us?</value>
+  </data>
+  <data name="str_bent_2_elem" xml:space="preserve">
+    <value>Pridekite bent 2 elementus</value>
+  </data>
   <data name="str_daugiau_negalima" xml:space="preserve">
-    <value>Daugiau elementu negalima prideti</value>
+    <value>Daugiau elementu negalima prideti arba neivedet reiksmes</value>
+  </data>
+  <data name="str_demesio" xml:space="preserve">
+    <value>Demesio</value>
   </data>
   <data name="str_helpas" xml:space="preserve">
     <value>asdasdasdjkasdfaaaaaaaaaaaaaaa\
 naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</value>
+  </data>
+  <data name="str_nepasirinktas_elem" xml:space="preserve">
+    <value>Nepasirinkote elemento</value>
   </data>
   <data name="str_pagalba" xml:space="preserve">
     <value>Pagalba</value>
