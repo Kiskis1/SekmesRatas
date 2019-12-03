@@ -248,7 +248,6 @@ namespace SekmesRatas
                     //Form1.form1.DrawString(c);
                     charIndex++;
                 }
-                log.LogAction("Value drawn");
             }
 
             #region Char Drawing
