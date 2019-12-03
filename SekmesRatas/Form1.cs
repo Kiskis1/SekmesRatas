@@ -14,6 +14,7 @@ namespace SekmesRatas
         GameWheel wheel;
 
         Random rand;
+        private SystemLog log;
 
         private string _result;
 
@@ -29,15 +30,13 @@ namespace SekmesRatas
         {
             InitializeComponent();
 
-            //SetStyle(ControlStyles.UserPaint, true);
-            //SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            //SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-
             Shown += Frm_Shown;
             timerRepaint.Tick += TimerRepaint_Tick;
 
             timerRepaint.Interval = 55;
             rand = new Random();
+            log = new SystemLog("Form init");
+
         }
 
         private void TimerRepaint_Tick(object sender, EventArgs e)
@@ -57,17 +56,21 @@ namespace SekmesRatas
             wheel = new GameWheel(panelCenter, radius, 0, 20, 1);
             wheel.SetGraphics(panel.CreateGraphics());
             wheel.Draw();
+
+            log.LogAction("Building wheel");
         }
-        
+
         private void RefreshListView()
         {
             ClearListView();
             foreach (var elem in elementList) listView1.Items.Add(elem);
+            log.LogAction("Refreshing view");
         }
 
         private void ClearListView()
         {
             listView1.Clear();
+            log.LogAction("Clearing view");
         }
 
         private void Btn_Clear_Click(object sender, EventArgs e)
@@ -76,6 +79,7 @@ namespace SekmesRatas
                 DialogResult.Yes) return;
             ClearListView();
             elementList.Clear();
+            log.LogAction("Button clear pressed");
         }
 
         private void Btn_Delete_Click(object sender, EventArgs e)
@@ -94,6 +98,7 @@ namespace SekmesRatas
             }
 
             RefreshListView();
+            log.LogAction("Button delete pressed");
         }
 
         private void Btn_Save_Click(object sender, EventArgs e)
@@ -103,6 +108,7 @@ namespace SekmesRatas
                 foreach (var s in elementList)
                     tw.WriteLine(s);
             }
+            log.LogAction("Button save pressed");
         }
 
         private void Btn_External_Click(object sender, EventArgs e)
@@ -126,12 +132,14 @@ namespace SekmesRatas
             {
                 MessageBox.Show(Resources.str_try_again);
             }
+            log.LogAction("Button external pressed");
         }
 
         private void Btn_Help_Click(object sender, EventArgs e)
         {
             MessageBox.Show(Resources.str_helpas, Resources.str_pagalba, MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+            log.LogAction("Button help pressed");
         }
 
         private void Btn_Spin_Click(object sender, EventArgs e)
@@ -142,10 +150,6 @@ namespace SekmesRatas
                     MessageBoxIcon.Information);
                 return;
             }
-
-            //SetStyle(ControlStyles.UserPaint, true);
-            //SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            //SetStyle(ControlStyles.AllPaintingInWmPaint, true);
 
             timerRepaint.Interval = 55;
 
@@ -169,10 +173,13 @@ namespace SekmesRatas
             }
 
             //MessageBox.Show(_result);
+
+            log.LogAction("Button spin pressed");
         }
 
         private void Btn_Add_Click(object sender, EventArgs e)
         {
+            log.LogAction("Button add pressed");
             using (var dialog = new AddDialog())
             {
                 var dialogResult = dialog.ShowDialog();
@@ -192,6 +199,12 @@ namespace SekmesRatas
                         break;
                 }
             }
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            log.LogAction("Application exit");
         }
     }
 }

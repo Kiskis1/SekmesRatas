@@ -8,6 +8,8 @@ namespace SekmesRatas
         private int _finalSector;
         public string Result { get; set; }
 
+        private static SystemLog log = new SystemLog("Gamewheel init");
+
         private Sector[] _wheel;
 
         private Point _center;
@@ -58,6 +60,7 @@ namespace SekmesRatas
 
                 _wheel[i] = new Sector(i, value, _sectorAngle, brushColor);
             }
+            log.LogAction("Wheel drawn");
         }
 
         private void CommonConstructor(Point center, int radius, int numSectors)
@@ -81,6 +84,7 @@ namespace SekmesRatas
             _triangleBrush = new SolidBrush(Color.White);
 
             State = STATE_NOT_STARTED;
+            log.LogAction("Wheel created");
         }
 
         #region Animation
@@ -92,6 +96,8 @@ namespace SekmesRatas
             _initialRotations = randomRotation / APPROX_INITIAL_ROTATE;
             _rotateAngle = (float)randomRotation / _initialRotations;
             State = STATE_INITIAL_SPIN;
+
+            log.LogAction("Wheel spinning");
 
             return Simulate();
         }
@@ -112,6 +118,7 @@ namespace SekmesRatas
 
             simulation.State = STATE_INITIAL_SPIN;
             while (simulation.State != STATE_HIGHLIGHTING) simulation.Refresh(false);
+            log.LogAction("Wheel result returned");
             return simulation.Result;
         }
 
@@ -180,6 +187,7 @@ namespace SekmesRatas
         public void SetGraphics(Graphics surface)
         {
             _surface = surface;
+            log.LogAction("Graphics set");
         }
 
         private void Rotate()
@@ -241,6 +249,7 @@ namespace SekmesRatas
                     //Form1.form1.DrawString(c);
                     charIndex++;
                 }
+                log.LogAction("Value drawn");
             }
 
             #region Char Drawing
