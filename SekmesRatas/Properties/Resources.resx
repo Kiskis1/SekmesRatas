@@ -133,11 +133,17 @@
     <value>asdasdasdjkasdfaaaaaaaaaaaaaaa\
 naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</value>
   </data>
+  <data name="str_laimejimas" xml:space="preserve">
+    <value>Jusu laimejimas yra: </value>
+  </data>
   <data name="str_nepasirinktas_elem" xml:space="preserve">
     <value>Nepasirinkote elemento</value>
   </data>
   <data name="str_pagalba" xml:space="preserve">
     <value>Pagalba</value>
+  </data>
+  <data name="str_sveikinimas" xml:space="preserve">
+    <value>Sveikinimai!</value>
   </data>
   <data name="str_try_again" xml:space="preserve">
     <value>Bandykite dar karta</value>

@@ -35,7 +35,6 @@ namespace SekmesRatas
         private int _initialRotations;
         private int _repaintCounter;
         private bool _highlight;
-
         public int State { get; set; }
         public const int STATE_NOT_STARTED = 0;
         public const int STATE_INITIAL_SPIN = 1;

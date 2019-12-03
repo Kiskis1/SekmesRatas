@@ -107,6 +107,15 @@ namespace SekmesRatas.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Jusu laimejimas yra: .
+        /// </summary>
+        internal static string str_laimejimas {
+            get {
+                return ResourceManager.GetString("str_laimejimas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nepasirinkote elemento.
         /// </summary>
         internal static string str_nepasirinktas_elem {
@@ -121,6 +130,15 @@ namespace SekmesRatas.Properties {
         internal static string str_pagalba {
             get {
                 return ResourceManager.GetString("str_pagalba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sveikinimai!.
+        /// </summary>
+        internal static string str_sveikinimas {
+            get {
+                return ResourceManager.GetString("str_sveikinimas", resourceCulture);
             }
         }
         

@@ -1,10 +1,11 @@
-﻿using SekmesRatas.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
+using SekmesRatas.Properties;
 
 namespace SekmesRatas
 {
@@ -53,7 +54,7 @@ namespace SekmesRatas
 
             var radius = (ClientSize.Height - 20) / 2;
 
-            wheel = new GameWheel(panelCenter, radius, 0, 20, 1);
+            wheel = new GameWheel(panelCenter, radius, 1, 20, 1);
             wheel.SetGraphics(panel.CreateGraphics());
             wheel.Draw();
 
@@ -170,7 +171,12 @@ namespace SekmesRatas
             {
                 timerRepaint.Start();
                 _result = wheel.Spin(ref rand);
+                var thread = new Thread(() => ShowResult(_result)) {IsBackground = true};
+
+                thread.Start();
             }
+
+            
 
             //MessageBox.Show(_result);
 
@@ -200,6 +206,13 @@ namespace SekmesRatas
                 }
             }
 
+        }
+
+        public void ShowResult(string result)
+        {
+            Thread.Sleep(17000);
+            
+            MessageBox.Show(Resources.str_laimejimas + elementList[int.Parse(result)-1], Resources.str_sveikinimas, MessageBoxButtons.OK);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
