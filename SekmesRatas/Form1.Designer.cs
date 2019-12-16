@@ -41,6 +41,7 @@
             this.Btn_Help = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.timerRepaint = new System.Windows.Forms.Timer(this.components);
+            this.Btn_Close = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -144,11 +145,22 @@
             this.panel.Size = new System.Drawing.Size(749, 582);
             this.panel.TabIndex = 10;
             // 
+            // Btn_Close
+            // 
+            this.Btn_Close.Location = new System.Drawing.Point(278, 393);
+            this.Btn_Close.Name = "Btn_Close";
+            this.Btn_Close.Size = new System.Drawing.Size(127, 53);
+            this.Btn_Close.TabIndex = 11;
+            this.Btn_Close.Text = "Iseiti";
+            this.Btn_Close.UseVisualStyleBackColor = true;
+            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 619);
+            this.Controls.Add(this.Btn_Close);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.Btn_Help);
             this.Controls.Add(this.Btn_External);
@@ -159,7 +171,7 @@
             this.Controls.Add(this.Btn_Delete);
             this.Controls.Add(this.Btn_Add);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -185,6 +197,7 @@
         private System.Windows.Forms.Button Btn_Help;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Timer timerRepaint;
+        private System.Windows.Forms.Button Btn_Close;
     }
 }
 

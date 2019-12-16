@@ -130,8 +130,13 @@
     <value>Demesio</value>
   </data>
   <data name="str_helpas" xml:space="preserve">
-    <value>asdasdasdjkasdfaaaaaaaaaaaaaaa\
-naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</value>
+    <value>Paspaudus mygtuka "Prideti", ismetama lentele, kurioje turite irasyti elementa, ir jis bus pridedamas i elementu sarasa.
+Paspaudus mygtuka "Istrinti", galesite istrinti pazymeta elementa.
+Paspaude "Istrinti viska", istrinsite visus elementus is saraso.
+Paspaudus mygtuka "SUKTI", ratas uzpildomas elementais ir pasukamas. Elementu tvarka sarase atitinka elementu tvarka rate. Galiausiai, rodyklei sustojus ant vieno elemento, elementas pradeda zybseti
+Paspaudus mygtuka "Ikelti", issokusiame lange pasirinkti tekstini faila ir juo yra uzpildomas elementu sarasas (is tekstinio failo nuskaitomi pirmi 20 elementu.
+Paspaudus mygtuka "Issaugoti", bus issaugoti visi elementai tekstiniame faile, kuris yra darbalaukyje pavadinimu "Saved.txt".
+Paspaudus mygtuka "Iseiti", programa uzdaroma.</value>
   </data>
   <data name="str_laimejimas" xml:space="preserve">
     <value>Jusu laimejimas yra: </value>

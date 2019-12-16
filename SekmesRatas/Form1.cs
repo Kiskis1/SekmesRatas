@@ -35,7 +35,7 @@ namespace SekmesRatas
             timerRepaint.Tick += TimerRepaint_Tick;
 
             timerRepaint.Interval = 55;
-            rand = new Random();
+            
             log = new SystemLog("Form init");
 
         }
@@ -145,6 +145,7 @@ namespace SekmesRatas
 
         private void Btn_Spin_Click(object sender, EventArgs e)
         {
+            UpdateButtonSpinEnabled(false);
             if (elementList.Count <= 0)
             {
                 MessageBox.Show(Resources.str_bent_2_elem, Resources.str_demesio, MessageBoxButtons.OK,
@@ -213,11 +214,22 @@ namespace SekmesRatas
             Thread.Sleep(17000);
             
             MessageBox.Show(Resources.str_laimejimas + elementList[int.Parse(result)-1], Resources.str_sveikinimas, MessageBoxButtons.OK);
+            UpdateButtonSpinEnabled(true);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             log.LogAction("Application exit");
+        }
+
+        private void Btn_Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void UpdateButtonSpinEnabled(bool value)
+        {
+            btn_spin.BeginInvoke(new MethodInvoker(delegate { btn_spin.Enabled = value; }));
         }
     }
 }

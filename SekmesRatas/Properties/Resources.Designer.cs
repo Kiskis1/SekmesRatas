@@ -97,8 +97,11 @@ namespace SekmesRatas.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to asdasdasdjkasdfaaaaaaaaaaaaaaa\
-        ///naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.
+        ///   Looks up a localized string similar to Paspaudus mygtuka &quot;Prideti&quot;, ismetama lentele, kurioje turite irasyti elementa, ir jis bus pridedamas i elementu sarasa.
+        ///Paspaudus mygtuka &quot;Istrinti&quot;, galesite istrinti pazymeta elementa.
+        ///Paspaude &quot;Istrinti viska&quot;, istrinsite visus elementus is saraso.
+        ///Paspaudus mygtuka &quot;SUKTI&quot;, ratas uzpildomas elementais ir pasukamas. Elementu tvarka sarase atitinka elementu tvarka rate. Galiausiai, rodyklei sustojus ant vieno elemento, elementas pradeda zybseti
+        ///Paspaudus mygtuka &quot;Ikelti&quot;, issokusiame lange pasirinkti [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string str_helpas {
             get {
